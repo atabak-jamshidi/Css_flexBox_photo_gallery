@@ -1,0 +1,118 @@
+* {
+  /*
+  💡 The box-sizing CSS property sets how the total width and height of an element is calculated.
+  ✨ Keyword values 
+  💎 box-sizing: border-box;
+  💎 box-sizing: content-box;*/
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #f5f6f7;
+}
+
+.header {
+  text-align: center;
+  /*
+  💡 The text-transform CSS property specifies how to capitalize an element's text. It can be used to make text appear in all-uppercase or all-lowercase, or with each word capitalized. It also can help improve legibility for ruby.
+  ✨ Keyword values
+  💎 text-transform: none;
+  💎 text-transform: capitalize;
+  💎 text-transform: uppercase;
+  💎 text-transform: lowercase;
+  💎 text-transform: full-width;
+  💎 text-transform: full-size-kana;
+   */
+  text-transform: uppercase;
+  padding: 32px;
+  background-color: #0a0a23;
+  color: #fff;
+  border-bottom: 4px solid #fdb347;
+}
+
+.gallery img {
+  width: 100%;
+  max-width: 350px;
+  height: 300px;
+  /* 
+  💡 The object-fit CSS property sets how the content of a replaced element, such as an <img> or <video>, should be resized to fit its container.
+  ✨ Keyword values
+  💎 object-fit: contain;
+  💎 object-fit: cover;
+  💎 object-fit: fill;
+  💎 object-fit: none;
+  💎 object-fit: scale-down;
+  */
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.gallery {
+  /* 
+  💡 The display CSS property sets whether an element is treated as a block or inline element and the layout used for its children, such as flow layout, grid or flex.
+   */
+  display: flex;
+  /* 
+  💡 The flex-direction CSS property sets how flex items are placed in the flex container defining the main axis and the direction (normal or reversed).
+    ✨ Keyword values
+    💫 The direction text is laid out in a line
+    💎 flex-direction: row;
+    💫 Like <row>, but reversed
+    💎 flex-direction: row-reverse;
+    💫 The direction in which lines of text are stacked
+    💎 flex-direction: column;
+    💫 Like <column>, but reversed
+    💎 flex-direction: column-reverse;
+  */
+  flex-direction: row;
+  /* 
+  💡 The flex-wrap CSS property sets whether flex items are forced onto one line or can wrap onto multiple lines. If wrapping is allowed, it sets the direction that lines are stacked.
+  ✨ Keyword values
+    💎 flex-wrap: nowrap;
+    💎 flex-wrap: wrap;
+    💎 flex-wrap: wrap-reverse;
+   */
+  flex-wrap: wrap;
+  /* 
+  💡 The CSS justify-content property defines how the browser distributes space between and around content items along the main-axis of a flex container, and the inline axis of a grid container.
+    ✨ Keyword values
+    💫 Pack items around the center
+    💎 justify-content: center; 
+    💫 Pack items from the start
+    💎 justify-content: start
+    💫 Pack items from the end
+    💎 justify-content: end;
+    💫 Pack flex items from the start
+    💎 justify-content: space-between;
+    💫 Distribute items evenly Items have a half-size space
+    💎 justify-content: space-around;
+    💫 Distribute items evenly Items have equal space around them
+    💎 justify-content: space-evenly;
+    💫 Distribute items evenly Stretch 'auto'-sized items to fit the container
+    💎 justify-content: stretch; 
+  */
+
+  /*
+  💡 The gap CSS property sets the gaps (gutters) between rows and columns. It is a shorthand for row-gap and column-gap. 
+   */
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 10px;
+  /*
+  🔦 we give a max width for our container because its a block element and by default it will be contain hole width of his section
+  after that we have to margin it auto for centerise our countainer in middle of screen
+   */
+  margin: 0 auto;
+  max-width: 1400px;
+}
+
+/* 
+💡 In CSS, ::after creates a pseudo-element that is the last child of the selected element. It is often used to add cosmetic content to an element with the content property. It is inline by default.
+*/
+.gallery::after {
+  content: "";
+  width: 350px;
+}
